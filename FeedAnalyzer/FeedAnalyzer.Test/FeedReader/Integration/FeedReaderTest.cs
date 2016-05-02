@@ -1,25 +1,42 @@
-﻿using FluentAssertions;
+﻿using FeedAnalyzer.FeedReader;
+using FeedAnalyzer.Interface.FeedReader;
+using FluentAssertions;
+using NSubstitute;
 using NUnit.Framework;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Reflection;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace FeedAnalyzer.Test.FeedReader.Integration
 {
     [TestFixture]
     public class FeedReaderTest
     {
-        private FeedAnalyzer.FeedReader.FeedReader reader;
+        private const string FEED_URL = "https://www.minutoseguros.com.br/blog/feed";
+        private FeedAnalyzer.FeedReader.FeedReader feedReader;
 
         [OneTimeSetUp]
-        public void Initialize()
+        public void Initiliaze()
         {
-            reader = new FeedAnalyzer.FeedReader.FeedReader();
+            var reader = new Reader();
+            feedReader = new FeedAnalyzer.FeedReader.FeedReader(reader);
         }
 
         [Test]
-        public void ReadFeedFromUrl()
+        public void Read10ArticlesFromUrl()
         {
-            var feed = reader.Read("https://www.minutoseguros.com.br/blog/feed");
+            var articles = feedReader.Read(FEED_URL);
+            articles.Should().NotBeNull().And.HaveCount(10);
+        }
 
-            feed.Should().NotBeNull();
+        [Test]
+        public void ContentArticleDoesntHaveHtmlTag()
+        {
+            var articles = feedReader.Read(FEED_URL);
+            
         }
     }
 }

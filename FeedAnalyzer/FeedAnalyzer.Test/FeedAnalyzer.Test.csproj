@@ -69,7 +69,12 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="Domain\Unit\ArticleAndPrepositionRemoverTest.cs" />
+    <Compile Include="Domain\Unit\ArticleTest.cs" />
+    <Compile Include="Domain\Unit\SpecialCharactersRemoverTest.cs" />
+    <Compile Include="FeedReader\Integration\ReaderTest.cs" />
     <Compile Include="FeedReader\Integration\FeedReaderTest.cs" />
+    <Compile Include="FeedReader\Unit\HtmlTagsRemoverTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />
@@ -77,9 +82,17 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\FeedAnalyzer.Domain\FeedAnalyzer.Domain.csproj">
+      <Project>{40ad34d0-eb35-4afb-ae4a-e57e463a0ad6}</Project>
+      <Name>FeedAnalyzer.Domain</Name>
+    </ProjectReference>
     <ProjectReference Include="..\FeedAnalyzer.FeedReader\FeedAnalyzer.FeedReader.csproj">
       <Project>{44e9513c-bd4b-4b45-bd4d-c77d044e7b0f}</Project>
       <Name>FeedAnalyzer.FeedReader</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FeedAnalyzer.Interface\FeedAnalyzer.Interface.csproj">
+      <Project>{6e983306-4c67-4029-863a-581d60fd9e57}</Project>
+      <Name>FeedAnalyzer.Interface</Name>
     </ProjectReference>
   </ItemGroup>
   <Choose>

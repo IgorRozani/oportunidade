@@ -1,9 +1,10 @@
-﻿using System.ServiceModel.Syndication;
+﻿using FeedAnalyzer.Domain.Model;
+using System.Collections.Generic;
 
 namespace FeedAnalyzer.Interface.FeedReader
 {
     public interface IFeedReader
     {
-        SyndicationFeed Read(string url);
+        IList<Article> Read(string url);
     }
 }

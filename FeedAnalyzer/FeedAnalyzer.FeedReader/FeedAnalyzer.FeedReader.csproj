@@ -42,9 +42,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="FeedReader.cs" />
+    <Compile Include="Helper\HtmlTagsRemover.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reader.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\FeedAnalyzer.Domain\FeedAnalyzer.Domain.csproj">
+      <Project>{40ad34d0-eb35-4afb-ae4a-e57e463a0ad6}</Project>
+      <Name>FeedAnalyzer.Domain</Name>
+    </ProjectReference>
     <ProjectReference Include="..\FeedAnalyzer.Interface\FeedAnalyzer.Interface.csproj">
       <Project>{6e983306-4c67-4029-863a-581d60fd9e57}</Project>
       <Name>FeedAnalyzer.Interface</Name>

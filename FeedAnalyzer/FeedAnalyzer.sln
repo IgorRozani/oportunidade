@@ -9,6 +9,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FeedAnalyzer.Test", "FeedAn
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FeedAnalyzer.Interface", "FeedAnalyzer.Interface\FeedAnalyzer.Interface.csproj", "{6E983306-4C67-4029-863A-581D60FD9E57}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FeedAnalyzer.Domain", "FeedAnalyzer.Domain\FeedAnalyzer.Domain.csproj", "{40AD34D0-EB35-4AFB-AE4A-E57E463A0AD6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FeedAnalyzer.Console", "FeedAnalyzer.Console\FeedAnalyzer.Console.csproj", "{6D2CF76C-3ECA-4EAB-B9B9-90DB48E003B5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +31,14 @@ Global
 		{6E983306-4C67-4029-863A-581D60FD9E57}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6E983306-4C67-4029-863A-581D60FD9E57}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6E983306-4C67-4029-863A-581D60FD9E57}.Release|Any CPU.Build.0 = Release|Any CPU
+		{40AD34D0-EB35-4AFB-AE4A-E57E463A0AD6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{40AD34D0-EB35-4AFB-AE4A-E57E463A0AD6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{40AD34D0-EB35-4AFB-AE4A-E57E463A0AD6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{40AD34D0-EB35-4AFB-AE4A-E57E463A0AD6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6D2CF76C-3ECA-4EAB-B9B9-90DB48E003B5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6D2CF76C-3ECA-4EAB-B9B9-90DB48E003B5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6D2CF76C-3ECA-4EAB-B9B9-90DB48E003B5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6D2CF76C-3ECA-4EAB-B9B9-90DB48E003B5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

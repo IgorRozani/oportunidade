@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{6E983306-4C67-4029-863A-581D60FD9E57}</ProjectGuid>
+    <ProjectGuid>{40AD34D0-EB35-4AFB-AE4A-E57E463A0AD6}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>FeedAnalyzer.Interface</RootNamespace>
-    <AssemblyName>FeedAnalyzer.Interface</AssemblyName>
+    <RootNamespace>FeedAnalyzer.Domain</RootNamespace>
+    <AssemblyName>FeedAnalyzer.Domain</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -32,7 +32,6 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
-    <Reference Include="System.ServiceModel" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -41,15 +40,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FeedReader\IFeedReader.cs" />
-    <Compile Include="FeedReader\IReader.cs" />
+    <Compile Include="Model\AnalyzeResult.cs" />
+    <Compile Include="Model\Article.cs" />
+    <Compile Include="Helper\ArticleAndPrepositionRemover.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\FeedAnalyzer.Domain\FeedAnalyzer.Domain.csproj">
-      <Project>{40ad34d0-eb35-4afb-ae4a-e57e463a0ad6}</Project>
-      <Name>FeedAnalyzer.Domain</Name>
-    </ProjectReference>
+    <Compile Include="Helper\SpecialCharactersRemover.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

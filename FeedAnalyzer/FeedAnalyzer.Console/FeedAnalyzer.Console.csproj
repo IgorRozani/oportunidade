@@ -4,15 +4,17 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{6E983306-4C67-4029-863A-581D60FD9E57}</ProjectGuid>
-    <OutputType>Library</OutputType>
+    <ProjectGuid>{6D2CF76C-3ECA-4EAB-B9B9-90DB48E003B5}</ProjectGuid>
+    <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>FeedAnalyzer.Interface</RootNamespace>
-    <AssemblyName>FeedAnalyzer.Interface</AssemblyName>
+    <RootNamespace>FeedAnalyzer.Console</RootNamespace>
+    <AssemblyName>FeedAnalyzer.Console</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -22,6 +24,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -32,7 +35,6 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
-    <Reference Include="System.ServiceModel" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -41,14 +43,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FeedReader\IFeedReader.cs" />
-    <Compile Include="FeedReader\IReader.cs" />
+    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\FeedAnalyzer.Domain\FeedAnalyzer.Domain.csproj">
       <Project>{40ad34d0-eb35-4afb-ae4a-e57e463a0ad6}</Project>
       <Name>FeedAnalyzer.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FeedAnalyzer.FeedReader\FeedAnalyzer.FeedReader.csproj">
+      <Project>{44e9513c-bd4b-4b45-bd4d-c77d044e7b0f}</Project>
+      <Name>FeedAnalyzer.FeedReader</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FeedAnalyzer.Interface\FeedAnalyzer.Interface.csproj">
+      <Project>{6e983306-4c67-4029-863a-581d60fd9e57}</Project>
+      <Name>FeedAnalyzer.Interface</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
