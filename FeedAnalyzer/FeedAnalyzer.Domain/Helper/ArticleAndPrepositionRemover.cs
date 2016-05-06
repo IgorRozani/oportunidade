@@ -20,7 +20,7 @@ namespace FeedAnalyzer.Domain.Helper
             if (words == null || !words.Any())
                 return null;
 
-            return words.Where(w => !wordsToRemove.Contains(w) && w.Length > 2).ToList();
+            return words.Where(w => !wordsToRemove.Contains(w)).ToList();
         }
     }
 }
