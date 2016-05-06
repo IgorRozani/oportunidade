@@ -15,13 +15,13 @@ namespace FeedAnalyzer.Console
             foreach (var article in articles)
             {
                 var analyzeResult = article.Analyze();
-                PrintAnalyze(analyzeResult);
+                PrintArticleAnalyze(analyzeResult);
             }
 
             System.Console.ReadKey();
         }
 
-        private static void PrintAnalyze(AnalyzeResult analyzeResult)
+        private static void PrintArticleAnalyze(ArticleAnalyzeResult analyzeResult)
         {
             System.Console.WriteLine($"Artigo: {analyzeResult.Title}");
             System.Console.WriteLine($"Quantidade de palavras: {analyzeResult.QuantityWords}");

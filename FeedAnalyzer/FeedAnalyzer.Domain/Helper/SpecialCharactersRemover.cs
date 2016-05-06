@@ -5,7 +5,7 @@ namespace FeedAnalyzer.Domain.Helper
 {
     public static class SpecialCharactersRemover
     {
-        const string removeChars = "?&^$#@!()+-,:;<>’\'-_*.";
+        const string removeChars = "?&^$#@!()+,:;<>’\'_*.";
 
         public static string Remove(string content)
         {

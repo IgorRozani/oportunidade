@@ -40,7 +40,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Model\AnalyzeResult.cs" />
+    <Compile Include="Model\ArticleAnalyzeResult.cs" />
     <Compile Include="Model\Article.cs" />
     <Compile Include="Helper\ArticleAndPrepositionRemover.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

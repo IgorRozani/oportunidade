@@ -1,7 +1,6 @@
 ﻿using FeedAnalyzer.Domain.Helper;
 using System.Collections.Generic;
 using System.Linq;
-using System;
 
 namespace FeedAnalyzer.Domain.Model
 {
@@ -12,7 +11,7 @@ namespace FeedAnalyzer.Domain.Model
         public string Title { get; set; }
         public string Content { get; set; }
 
-        public AnalyzeResult Analyze()
+        public ArticleAnalyzeResult Analyze()
         {
             var wordList = CleanAndSplitContent();
 
@@ -31,7 +30,7 @@ namespace FeedAnalyzer.Domain.Model
 
             var mostUsedWords = sortedWords.ToDictionary(w => w.Word, w => w.Count);
 
-            return new AnalyzeResult
+            return new ArticleAnalyzeResult
             {
                 Title = Title,
                 QuantityWords = quantityWords,

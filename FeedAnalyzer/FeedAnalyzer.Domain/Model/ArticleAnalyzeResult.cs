@@ -2,7 +2,7 @@
 
 namespace FeedAnalyzer.Domain.Model
 {
-    public class AnalyzeResult
+    public class ArticleAnalyzeResult
     {
         public string Title { get; set; }
         public int QuantityWords { get; set; }
